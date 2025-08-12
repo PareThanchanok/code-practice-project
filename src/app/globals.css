@@ -19,17 +19,40 @@ body {
 }
 
 h1 {
-  font-size: 42pt;
+  font-size: 42px;
 }
 
 h2 {
-  font-size: 32pt;
+  font-size: 32px;
 }
 
 h3 {
-  font-size: 24pt;
+  font-size: 24px;
 }
 
 p {
-  font-size: 16pt;
+  font-size: 16px;
+}
+
+.section-wrapper { 
+  padding: 8rem 4rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  .section-wrapper {
+    padding: 4rem 2rem;
+  }
 }

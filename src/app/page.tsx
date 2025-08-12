@@ -1,9 +1,11 @@
 import Hero from "./sections/Hero";
+import ProductList from "./sections/ProductList";
 
 export default function Page() {
   return(
-    <div>
+    <main>
       <Hero/>
-    </div>
+      <ProductList/>
+    </main>
   );
 }

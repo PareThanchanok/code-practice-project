@@ -1,19 +1,18 @@
-import React from "react";
+import Link from "next/link";
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: "primary" | "secondary";
-};
+interface ButtonProps {
+    link: string; 
+    cta: string;
+    variant?: "primary" | "secondary";
+}
 
-export default function Button({variant = "primary", className = "", children, ...props}: ButtonProps) {
-  const primary =
-    "bg-neutral-900 px-6 py-3 text-white rounded-lg text-lg";
-  const secondary =
-    "bg-neutral-200 px-6 py-3 rounded-lg text-lg";
-  const variantClass = variant === "primary" ? primary : secondary;
-
-  return (
-    <button className={`${variantClass} ${className}`} {...props}>
-      {children}
-    </button>
-  );
+export default function Button({ link, cta, variant = "primary", ...props } : ButtonProps) {
+    const baseClass = "px-6 py-3 rounded-lg text-sm md:text-lg w-fit";
+    const varientClass = 
+        variant === "primary" 
+            ? "bg-neutral-900 text-white"
+            : "bg-neutral-100 text-black"
+    return(
+        <Link href={link} className={`${baseClass} ${varientClass}`}>{cta}</Link>
+    );
 }
