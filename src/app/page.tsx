@@ -3,6 +3,7 @@ import Search from "./components/Search";
 import TodoList from "./components/TodoList";
 import Hero from "./sections/Hero";
 import ProductList from "./sections/ProductList";
+import SignUp from "./sections/SignUp";
 
 export default function Page() {
   return(
@@ -12,6 +13,7 @@ export default function Page() {
       <TodoList id={12} text="Write a report"/>
       <ImageCarousel/>
       <Search id={0} name="p" phone={1234} email="p"/>
+      <SignUp/>
     </main>
   );
 }
