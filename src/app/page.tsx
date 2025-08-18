@@ -1,3 +1,4 @@
+import Counter from "./components/Counter";
 import ImageCarousel from "./components/ImageCarousel";
 import Search from "./components/Search";
 import TodoList from "./components/TodoList";
@@ -13,6 +14,7 @@ export default function Page() {
       <TodoList id={12} text="Write a report"/>
       <ImageCarousel/>
       <Search id={0} name="p" phone={1234} email="p"/>
+      <Counter/>
       <SignUp/>
     </main>
   );
